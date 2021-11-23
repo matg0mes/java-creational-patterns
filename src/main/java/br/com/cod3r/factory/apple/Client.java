@@ -1,23 +1,18 @@
 package br.com.cod3r.factory.apple;
 
-import br.com.cod3r.factory.apple.factory.IPhone11Factory;
-import br.com.cod3r.factory.apple.factory.IPhone11ProFactory;
-import br.com.cod3r.factory.apple.factory.IPhoneXFactory;
-import br.com.cod3r.factory.apple.model.IPhone;
+import br.com.cod3r.factory.apple.factory.IPhoneSimpleFactory;
+import br.com.cod3r.factory.apple.model.*;
 
 public class Client {
 
     public static void main(String[] args) {
-        IPhoneXFactory iPhoneXFactory = new IPhoneXFactory();
-        IPhone11ProFactory iPhone11ProFactory = new IPhone11ProFactory();
+        IPhoneSimpleFactory iPhoneSimpleFactory = new IPhoneSimpleFactory();
 
         System.out.println("### Ordering an iPhone X");
-        IPhone iPhone = iPhoneXFactory.createIPhone();
-        iPhone.getHardware();
+        IPhone iPhone = iPhoneSimpleFactory.orderIphone("X", "standard");
 
-        System.out.println("### Ordering an iPhone 11 HighEnd");
-        IPhone iPhone2 = iPhone11ProFactory.createIPhone();
-        iPhone2.getHardware();
+        System.out.println("\n\n### Ordering an iPhone 11 HighEnd");
+        IPhone iPhone2 = iPhoneSimpleFactory.orderIphone("11", "highEnd");
 
     }
 }
