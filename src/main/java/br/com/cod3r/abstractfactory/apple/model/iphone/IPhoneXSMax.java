@@ -8,7 +8,7 @@ public class IPhoneXSMax extends IPhone {
 		super(rules);
 	}
 
-	@Override
+    @Override
 	public void getHardware() {
 		System.out.println("Hardware list");
 		System.out.println("\t- 6.5in Screen");

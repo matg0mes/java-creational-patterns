@@ -2,6 +2,10 @@ package br.com.cod3r.factory.apple.model;
 
 public class IPhoneX extends IPhone {
 
+	public IPhoneX() {
+		super();
+	}
+
 	@Override
 	public void getHardware() {
 		System.out.println("Hardware list");
